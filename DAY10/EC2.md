@@ -1,3 +1,18 @@
+| Your Requirement  | AWS Service                             | Purpose                                               |
+| ----------------- | --------------------------------------- | ----------------------------------------------------- |
+| **Code (Dev)**    | Git / GitHub                            | Store application source code                         |
+| **CI/CD**         | Jenkins / GitHub Actions / CodePipeline | Build, test and deploy application                    |
+| **Servers**       | **EC2**                                 | Virtual servers to run applications                   |
+| **Load Balancer** | **ELB**                                 | Distributes traffic across EC2 instances              |
+| **Database**      | **RDS**                                 | Managed relational database                           |
+| **Storage**       | **S3**                                  | Object/file storage                                   |
+| **Network**       | **VPC**                                 | Private network for AWS resources                     |
+| **Security**      | IAM / Security Groups / NACL            | Control access and network traffic                    |
+| **Domain**        | Route 53                                | DNS and domain management                             |
+| **Internet**      | Internet Gateway                        | Allows VPC resources to communicate with the internet |
+
+
+
 ## 1. Introduction to Amazon EC2 (Elastic Compute Cloud)
 
 ### What is EC2?
