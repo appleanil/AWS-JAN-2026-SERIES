@@ -431,6 +431,8 @@ This updates file system to use new space.
 ## 12. Expanding Root Volume (Linux)
 
 ### Step 1: Increase root volume size in AWS Console
+If increase the volume but not decrease the volume.
+one more point to remember is if we increase the volume then again we need to increase the volume then we need to wait for 6hrs.
 
 ---
 
