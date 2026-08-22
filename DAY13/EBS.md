@@ -8,12 +8,12 @@
 4. Go to Volume section and select the volume which we created then select Actions later Attach the Volume in same Available Zone, EC2 Instance Name and device name is anything we can go select /dev/sdf.
 5. Then go and check in linux lsblk it shows you attached Additional Volume and if we observe here there is no mount any directory.
 6. If we go mount file system command df -Th it will not shows 5GB and not mount to any directory.
-7. Please check that Additional volume created file system or not by command sudo file -s /dev/nvme0n1(it will different for every ec2 instance).
+7. Please check that Additional volume created file system or not by command sudo file -s /dev/nvme1n1(it will different for every ec2 instance).
 8. If we got xfs then file system is created and if not then data is not shown.
-9. If not showing then create with command sudo mkfs xfs /dev/nvme0n1 and verify once created or not with command sudo file -s /dev/nvme0n1.
+9. If not showing then create with command sudo mkfs xfs /dev/nvme1n1 and verify once created or not with command sudo file -s /dev/nvme1n1.
 10. Then check once file is mounted or not, it shows no mounted.
 11. So that we create mkdir ebsvol and in that create one file called ebs.log some other info and copy the path like /home/ec2-user/ebsvol.
-12. Attach one mount point with command sudo mount /dev/nvme01 /home/ec2-user/ebsvol and later verify once mounted or not with lsblk and df -Th.
+12. Attach one mount point with command sudo mount /dev/nvme11 /home/ec2-user/ebsvol and later verify once mounted or not with lsblk and df -Th.
 13. Go and reboot once, with command sudo inti 6 and In GUI After Rebooting the EC2 Instance it will automatically unmount and again we need to mount the volumes to EC2 Instance but data is safe.
 14. ### Temporary mount
 
