@@ -1,5 +1,7 @@
 # After Rebooting the EC2 Instance it will automatically unmount and again we need to mount the volumes to EC2 Instance but data is safe.
 
+1. 
+
 
 # AWS EBS (Elastic Block Store) – Complete In-Depth Guide
 
