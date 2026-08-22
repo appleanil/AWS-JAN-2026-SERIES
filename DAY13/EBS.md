@@ -1,6 +1,20 @@
 # After Rebooting the EC2 Instance it will automatically unmount and again we need to mount the volumes to EC2 Instance but data is safe.
 
-1. 
+# Class Breif Explaination
+
+1. Create a EC2 Instance and check commands for root volume once lslbk and df -Th and if we want check root info store ls -lrth /dev.
+2. Create EBS Volume in GUI with 5GB storage and volume should same with EC2 instance and same Available Zone. If you want create one EBS Volume for Additional volume in different Available Zone, After when attaching to EC2 Instance it will not show to bound the EC2 Instance.
+3. Add Tags for Name is Additional Volume, CreatedBy Dhage Anil Kumar and Date, Team and User upto 50 tags we can create.
+4. Go to Volume section and select the volume which we created then select Actions later Attach the Volume in same Available Zone, EC2 Instance Name and device name is anything we can go select /dev/sdf.
+5. Then go and check in linux lsblk it shows you attached Additional Volume and if we observe here there is no mount any directory.
+6. If we go mount file system command df -Th it will not shows 5GB and not mount to any directory.
+7. Please check that Additional volume created file system or not by command sudo file -s /dev/nvme0n1(it will different for every ec2 instance).
+8. If we got xfs then file system is created and if not then data is not shown.
+9. If not showing then create with command sudo mkfs xfs /dev/nvme0n1 and verify once created or not with command sudo file -s /dev/nvme0n1.
+10. Then check once file is mounted or not, it shows no mounted.
+11. So that we create mkdir ebsvol and in that create one file called ebs.log some other info and copy the path like /home/ec2-user/ebsvol.
+12. Attach one mount point with command sudo mount /dev/nvme01 /home/ec2-user/ebsvol and later verify once mounted or not with lsblk and df -Th.
+13.    
 
 
 # AWS EBS (Elastic Block Store) – Complete In-Depth Guide
