@@ -14,7 +14,125 @@
 10. Then check once file is mounted or not, it shows no mounted.
 11. So that we create mkdir ebsvol and in that create one file called ebs.log some other info and copy the path like /home/ec2-user/ebsvol.
 12. Attach one mount point with command sudo mount /dev/nvme01 /home/ec2-user/ebsvol and later verify once mounted or not with lsblk and df -Th.
-13.    
+13. Go and reboot once, with command sudo inti 6 and In GUI After Rebooting the EC2 Instance it will automatically unmount and again we need to mount the volumes to EC2 Instance but data is safe.
+14. ### Temporary mount
+
+* Stored in `/etc/mtab`
+* Lost after reboot
+* Again we need to mount for so that we need to run the command is sudo mount /dev/nvme02 /home/ec2-user/ebsvol
+
+15. ### Permanent Mount Configuration
+
+1. Copy the mount entry ---> sudo mount /dev/nvme02 /home/ec2-user/ebsvol.
+2. sudo tail -1 /etc/mtab take the info and copy and paste in below command.
+3. sudo vi /etc/fstab.
+4. once verify the with reboot sudo inti 6 and in GUI reboot, later check with lsblk and df-Th and check with mount -a if not get any issues then fstab is mounted correctly.
+5. /etc/mtab  → Shows current mounted filesystems.
+   /etc/fstab → Used for permanent mounts after reboot.
+16. If we expand the Additional Volume for EBS Volume in GUI with modify 5GB to 9Gb then come and check in Linux lsblk it shows 9GB but in df -Th is shows 5GB only.
+17. Then use command sudo xfs_growfs -d /home/ec2-user/ebsvol and later verify with lsblk and df -Th now it shows same 9Gb in both.
+18. If we want again expand the volume 9GB to 19Gb it will takes 6hrs to modify.
+19. To expand an **AWS EC2 root volume from 8 GB to 9 GB**, there are two steps:
+
+## Step 1: Increase the EBS volume size
+
+First, find the volume ID:
+
+```bash
+aws ec2 describe-instances \
+  --instance-ids i-xxxxxxxxxxxxxxxxx \
+  --query "Reservations[].Instances[].BlockDeviceMappings[].Ebs.VolumeId" \
+  --output text
+```
+
+Then modify the volume:
+
+```bash
+aws ec2 modify-volume \
+  --volume-id vol-xxxxxxxxxxxxxxxxx \
+  --size 9
+```
+
+Check the modification status:
+
+```bash
+aws ec2 describe-volumes-modifications \
+  --volume-ids vol-xxxxxxxxxxxxxxxxx
+```
+
+---
+
+## Step 2: Expand the root partition and filesystem
+
+Check your disk:
+
+```bash
+lsblk
+```
+
+For example:
+
+```text
+NAME         SIZE
+nvme0n1        9G
+└─nvme0n1p1    8G
+```
+
+Install `growpart` if necessary:
+
+```bash
+sudo apt update
+sudo apt install cloud-guest-utils -y
+```
+
+Expand partition 1:
+
+```bash
+sudo growpart /dev/nvme0n1 1
+```
+
+Then, for an **ext4 filesystem**:
+
+```bash
+sudo resize2fs /dev/nvme0n1p1
+```
+
+Verify:
+
+```bash
+df -h
+```
+
+### For older EC2 devices such as `/dev/xvda`
+
+```bash
+sudo growpart /dev/xvda 1
+sudo resize2fs /dev/xvda1
+```
+
+### Simple flow
+
+```text
+8 GB EBS Volume
+      ↓
+AWS CLI modify-volume
+      ↓
+9 GB EBS Volume
+      ↓
+growpart
+      ↓
+Expand root partition
+      ↓
+resize2fs
+      ↓
+Root filesystem becomes 9 GB
+```
+
+If your filesystem is **XFS** instead of ext4, use `xfs_growfs /` rather than `resize2fs`.
+
+20. In GUI expand Root Volume, goto root vol and select actions, click on modify 8GB to 9GB.
+21. Later verify once lsblk and df -Th it shows 8GB only.
+22. Run command sudo growpart /dev/nvme0n1 1 and reboot once with sudo inti 6 or do in GUI also and re connect verify once lsblk and df -Th.
 
 
 # AWS EBS (Elastic Block Store) – Complete In-Depth Guide
