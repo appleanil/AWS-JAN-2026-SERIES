@@ -22,6 +22,7 @@
    * Give the policy the name:
      **`Allow-Access-From-Specific-IP-Deny`**
    * Review the policy and click **Create policy**.
+   * Remove S3FullAccess
 
 4. **Attach the Policy to a User**
 
