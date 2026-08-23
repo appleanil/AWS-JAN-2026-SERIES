@@ -1,3 +1,34 @@
+Original EBS Volume
+
+        ↓
+ebslogs.logs exists ✅
+
+        ↓
+Create Snapshot
+
+        ↓
+Wait until Completed
+
+        ↓
+Create New Volume FROM that Snapshot
+
+        ↓
+Attach to EC2 Server 2
+
+        ↓
+Check lsblk -f
+
+        ↓
+DO NOT run mkfs.xfs
+
+        ↓
+Mount the volume
+
+        ↓
+Check old file
+
+
+
 Sure. Here is the **proper end-to-end workflow** for your scenario:
 
 # EBS Server → Snapshot → New EBS Volume → New EC2 Server
