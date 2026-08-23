@@ -1,3 +1,5 @@
+# In Video 14 cannot taken snapshot so that Trainer again explained in Video 15
+
 # Amazon EBS Snapshots – Deep Explanation
 
 ### What is an EBS Snapshot?
