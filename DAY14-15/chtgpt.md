@@ -38,7 +38,7 @@ Sure. Here is the **proper end-to-end workflow** for your scenario:
 │                     EC2 SERVER 1                        │
 │                                                         │
 │   Root Volume              Additional EBS Volume        │
-│   /dev/nvme0n1             /dev/nvme1n1                │
+│   /dev/nvme0n1             /dev/nvme1n1                 │
 │        │                         │                      │
 │        │                         ▼                      │
 │        │                    Create XFS                  │
@@ -61,7 +61,7 @@ Sure. Here is the **proper end-to-end workflow** for your scenario:
 │        │                  EC2 SERVER 2                  │
 │        │                         │                      │
 │   Root Volume              New EBS Volume               │
-│   /dev/nvme0n1             /dev/nvme2n1                │
+│   /dev/nvme0n1             /dev/nvme2n1                 │
 │                                  │                      │
 │                                  ▼                      │
 │                    Mount with -o nouuid                 │
