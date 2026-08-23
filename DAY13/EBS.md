@@ -1,5 +1,7 @@
 # After Rebooting the EC2 Instance it will automatically unmount and again we need to mount the volumes to EC2 Instance but data is safe.
 
+# This command is helpful sudo mount -t xfs -o nouuid /dev/nvme2n1 /home/ec2-user/newlogs
+
 # Class Breif Explaination
 
 1. Create a EC2 Instance and check commands for root volume once lslbk and df -Th and if we want check root info store ls -lrth /dev.
