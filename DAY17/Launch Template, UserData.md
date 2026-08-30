@@ -471,8 +471,8 @@ If you're doing this specifically to practice **EC2 User Data**, I can also give
 # 3. How to check the logs directory is 
 ```
 sudo cd /var/log/httpd
-sudo cat /var/log/httpd/ access_log
-sudo cat /var/log/http/ error_log
+sudo cat /var/log/httpd/access_log
+sudo cat /var/log/httpd/error_log
 ```
 If you are using **Amazon Linux + Apache (`httpd`)**, there are two main log files.
 
