@@ -317,6 +317,8 @@ here is the step-by-step process for **Amazon Linux**.
 
 ```bash
 sudo mkdir -p /home/ec2-user/website
+or
+sudo mkdir -p /home/apache/website
 ```
 
 Create a test page:
@@ -343,6 +345,8 @@ Change it to:
 
 ```apache
 DocumentRoot "/home/ec2-user/website"
+or
+/home/apache/website
 ```
 
 Also find:
@@ -354,13 +358,15 @@ Also find:
 Change it to:
 
 ```apache
-<Directory "/home/ec2-user/website">
+<Directory "/home/ec2-user/website"> or /home/apache/website
+or
+/home/apache/website
 ```
 
 Make sure the directory block contains:
 
 ```apache
-<Directory "/home/ec2-user/website">
+<Directory "/home/ec2-user/website"> or /home/apache/website
     AllowOverride None
     Require all granted
 </Directory>
