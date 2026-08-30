@@ -574,5 +574,11 @@ sudo tail -n 50 /var/log/httpd/error_log
 ```bash
 sudo tail -n 50 /var/log/httpd/access_log
 ```
+```
+sudo nl -ba /var/log/httpd/access_log | tail -10
+sudo grep -n '" 403 ' /var/log/httpd/access_log
+sudo nl -ba /var/log/httpd/access_log | tail -10
+sudo tail -10 /var/log/httpd/access_log | nl
+```
 
 If you want to **create an error intentionally and then see it appear in `error_log`**, I can give you a simple HTTPD practice exercise.
