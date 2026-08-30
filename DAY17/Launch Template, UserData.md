@@ -387,6 +387,7 @@ Apache needs permission to access the directory:
 ```bash
 sudo chmod 755 /home/ec2-user
 sudo chmod 755 /home/ec2-user/website
+sudo chmod 644 /home/ec2-user/server/index.html
 ```
 
 ### 4. Test Apache configuration
