@@ -1,3 +1,4 @@
+# If we are using a custom path instead of /var/www/html/, such as /home/ec2-user/website, then the highest priority is the custom path only.
 # Class Brief Explaination
 ## 1. Launch Template and User Data
 Yes 👍 **Launch Template** is the next important AWS topic after AMI.
