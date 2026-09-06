@@ -7,15 +7,6 @@ We will build this example:
 
 > **Use AWS Systems Manager Session Manager to connect to an EC2 instance without SSH or opening port 22.**
 
-![Image](https://images.openai.com/static-rsc-4/FPmK5rPth2zWDx0qTnN15qS8J54WBkjn_KrlchNXYPpw54yN90WRmI4aTBX3NDtKZWR5RWHvwHigJK7izRm20q0aFrZciZTTRcNoZhuc_KD8rdaVQgk7EIbL4ZJHFPRCXh-ezoenhF0mWM86Ql7pTCbSxBHTrGMSJP9sC1b9yg9vIf2owqjLyEzwBiiSXFPc?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/7NuuTdMjj7XsPh8ZJ1KCwomUtz26uIo-WqQCXBD8EniZf23KOHPjkX0sM7ggy3jQ21rbC82geZLtEAmxwgTKfwT1Z8ffTwDfoplNQjWHMDk6FqQJe1i4uVOcnGFtC1GsnD_-EjTaJ5NpKd8acR0IAm7btbpcG6qVUpHhGVtn1mIvR3KrbWnbeziqnziVIqVz?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/0z4q0PBaLgSASUSvdJj1LfWkWO0XT76UkervpKr7QLlbCKTdayU-KVxO3GC--J4GF4v9lXLsS5tUkOdQrwe1Flx9lDjbm1eFhEFwNyQ-fi_tN3RFRxurI-Sv3AeCYZsxoPkmZ_SJt_UlDKQonKtUx2QloWa1V1FXfA7M70ZmBUchXgcZjaH0EeSwUkUF-mS1?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/jI9FhvmEDTn2qLdoeYr-3YHLYnRTuCes8ILctU5zjiCDyczOk3eWFZDNOpGGXtsgRcfiRbebeWvKXIuivvUO0a_tumSlEnerfyex9CuKP2VWcthVYnjRhLhmz0-nAvOG1WiPuiCZQGqRqTYhSuNq0Ud7g9VH6TTxTKd2bY147xjOEPp99zsZsHXAndM_y5_B?purpose=fullsize)
-
-![Image](https://images.openai.com/static-rsc-4/aOPYAmU7F4ejwfZrxRvLnAAMH07pKwBLNcA-sp4Yo6x-R6mOwQ3fxLvQSxF6arb4Y1F7rqlLfgvAC2zMJ6WXJ3Tl9EMWBRXJYFRuz470XnoSwSGbEwiW2PLbdL7CvcyG6_TrPal5V5dl1Syxm1zO_nfqGS3y3l1F61tG1hmfC4HagGH5NBg5GA9sSjBzPS2u?purpose=fullsize)
 
 ## Example architecture
 
