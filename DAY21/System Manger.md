@@ -162,6 +162,8 @@ Click:
 
 ---
 
+# Reboot the Instance once
+
 # Step 5 — Check SSM Agent
 
 Amazon Linux 2023 AMIs normally include the **SSM Agent**.
