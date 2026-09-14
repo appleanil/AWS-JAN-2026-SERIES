@@ -1,3 +1,7 @@
+# But IAM is a global AWS service, and IAM API events are delivered to EventBridge in US East (N. Virginia) — us-east-1. AWS specifically documents that global-service API events such as IAM are available in us-east-1 for EventBridge.
+# Use N.Virgina for IAM Services.
+
+
 # 1. Introduction to EventBridge
 
 EventBridge is a serverless event bus service used to build event-driven architecture.
