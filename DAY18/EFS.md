@@ -45,6 +45,8 @@ Run these commands on both instances:
 ```bash
 sudo yum update -y
 sudo yum install -y httpd amazon-efs-utils
+sudo dnf install -y nmap-ncat
+nc -zv 172.31.17.18 2049
 sudo systemctl enable httpd
 sudo systemctl start httpd
 ```
