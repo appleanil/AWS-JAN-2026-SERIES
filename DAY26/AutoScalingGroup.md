@@ -516,11 +516,17 @@ CPU < 30%
 Decrease instances.
 
 ## For Dynamically ASG Remove Instances and Add Instances
+---
 Policy type: Step scaling
+
 Enabled: Yes
+
 Alarm: Auto-Scaling-Alarm
+
 Condition: CPU > 80%
+
 Action: Remove/Add
+
 Capacity units: 1
 
 ---
