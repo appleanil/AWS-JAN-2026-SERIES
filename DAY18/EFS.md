@@ -1,3 +1,7 @@
+# Whenever having issues with EFS not in sync then run this command like this
+
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport 172.31.32.27:/ /var/www/html/
+
 # Amazon EFS Setup with Two Apache Web Servers (EC2)
 
 This guide explains how to configure Amazon Elastic File System (EFS) to be used as shared storage between two EC2 instances running Apache HTTP Server. The goal is to serve the same web content from both instances using EFS.
