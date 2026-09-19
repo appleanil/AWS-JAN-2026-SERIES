@@ -51,6 +51,7 @@ sudo yum update -y
 sudo yum install -y httpd amazon-efs-utils
 sudo dnf install -y nmap-ncat
 nc -zv 172.31.17.18 2049
+nc -zv fs-0d98d657c05cfa911.efs.ap-south-1.amazonaws.com 2049
 sudo systemctl enable httpd
 sudo systemctl start httpd
 ```
