@@ -1,27 +1,22 @@
 <img width="986" height="576" alt="image" src="https://github.com/user-attachments/assets/3188991a-7b28-4f68-bf3f-f4fe6f454cb5" />
 
+# IN Bound Rule
 
-100
-SSH (22)
-TCP (6)
-22
-0.0.0.0/0
-Allow
-200
-HTTP (80)
-TCP (6)
-80
-0.0.0.0/0
-Allow
-300
-All traffic
-All
-All
-0.0.0.0/0
-Allow
-*
-All traffic
-All
-All
-0.0.0.0/0
-Deny
+| Rule # | Type        | Protocol | Port Range | Source    | Allow/Deny |
+| -----: | ----------- | -------- | ---------: | --------- | ---------- |
+|    100 | SSH         | TCP (6)  |         22 | 0.0.0.0/0 | Allow      |
+|    200 | HTTP        | TCP (6)  |         80 | 0.0.0.0/0 | Allow      |
+|    300 | All traffic | All      |        All | 0.0.0.0/0 | Allow      |
+|      * | All traffic | All      |        All | 0.0.0.0/0 | Deny       |
+
+
+
+# Out Bound Rule
+
+| Rule Number | Type        | Protocol | Port Range | Source    | Allow/Deny |
+| ----------: | ----------- | -------- | ---------: | --------- | ---------- |
+|          90 | HTTP        | TCP (6)  |         80 | 0.0.0.0/0 | Allow      |
+|         100 | Custom TCP  | TCP (6)  | 1053–65335 | 0.0.0.0/0 | Allow      |
+|         200 | SSH         | TCP (6)  |         22 | 0.0.0.0/0 | Allow      |
+|         300 | All traffic | All      |        All | 0.0.0.0/0 | Allow      |
+|         `*` | All traffic | All      |        All | 0.0.0.0/0 | Deny       |
