@@ -163,6 +163,10 @@ Example
 fs-xxxx.efs.ap-south-1.amazonaws.com
 ```
 
+```
+nc -zv fs-0d98d657c05cfa911.efs.ap-south-1.amazonaws.com 2049
+```
+
 ---
 
 # Step 5 Install NFS Utilities
